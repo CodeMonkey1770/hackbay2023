@@ -8,7 +8,7 @@ import { filter, from, map } from 'rxjs';
 export class OpenAiService {
 
   readonly configuration = new Configuration({
-    apiKey: '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'
+    apiKey: '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'
   });
 
   readonly openai = new OpenAIApi(this.configuration);
