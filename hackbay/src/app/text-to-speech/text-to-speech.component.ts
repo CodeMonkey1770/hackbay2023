@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { NgWebApisSpeechService } from '../ng-web-apis-speech.service';
+import { SpeechService } from '../speech.service';
 
 @Component({
   selector: 'app-text-to-speech',
@@ -7,7 +7,7 @@ import { NgWebApisSpeechService } from '../ng-web-apis-speech.service';
   styleUrls: ['./text-to-speech.component.scss']
 })
 export class TextToSpeechComponent {
-  constructor( private service:NgWebApisSpeechService) {
+  constructor( private service:SpeechService) {
     service.speakText('This is a message from your winning team!')
   }
 
