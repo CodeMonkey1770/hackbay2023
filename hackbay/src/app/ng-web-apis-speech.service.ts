@@ -1,5 +1,4 @@
 import { Injectable } from '@angular/core';
-import { SpeechSynthesisModule } from '@ng-web-apis/speech';
 
 @Injectable({
   providedIn: 'root'
