@@ -1,6 +1,8 @@
 import { Component } from '@angular/core';
 import { OpenAiService } from '../open-ai.service';
 import { inputDto } from '../models/inputDto';
+import { outputDto } from '../models/outputDto';
+import { SpeechService } from '../speech.service';
 
 @Component({
   selector: 'app-chat-gpt',
@@ -9,16 +11,30 @@ import { inputDto } from '../models/inputDto';
 })
 export class ChatGptComponent {
 
-  text : string = '';
+  text : outputDto | undefined;
+  temptext : outputDto | undefined;
   loading : boolean = true;
   input : inputDto = new inputDto();
-  constructor(private service: OpenAiService){
+  constructor(private service: OpenAiService, private speech:SpeechService){
 
     let request = this.input.createRequest();
 
     service.getDataFromOpenAI(request).subscribe(next => {
-      this.text = next;
-      this.loading = false;
+      console.log('returned');
+      this.temptext = next;
     });
+
+
+    setTimeout(() => {
+      console.log('sleep');
+      this.loading = false;
+      this.text = this.temptext;
+      console.log('speak!');
+      console.log(this.text?.chapter1?.text!);
+      speech.speakText(this.text?.chapter1?.text!);
+    }, 5000);
+
+
+
   }
 }

@@ -1,2 +1,12 @@
 <div *ngIf="loading"><img src="assets/loading.gif"><br>loading...</div>
-{{text}}
+<div>
+    <h1>{{text?.title ||''}}</h1>
+    <h2>{{text?.chapter1?.title ||''}}</h2>
+    <p>{{text?.chapter1?.text ||''}}</p>
+    <h2>{{text?.chapter2?.title ||''}}</h2>
+    <p>{{text?.chapter2?.text ||''}}</p>
+    <h2>{{text?.chapter3?.title ||''}}</h2>
+    <p>{{text?.chapter3?.text ||''}}</p>
+    <h2>{{text?.chapter4?.title ||''}}</h2>
+    <p>{{text?.chapter4?.text ||''}}</p>
+</div>
