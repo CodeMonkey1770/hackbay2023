@@ -1,10 +1,14 @@
 import { Component } from '@angular/core';
-import { MatCardModule } from '@angular/material/card'
+import {MatInputModule} from '@angular/material/input';
+import {MatFormFieldModule} from '@angular/material/form-field';
+import {FormsModule} from '@angular/forms';
 
 @Component({
   selector: 'app-start-page',
   templateUrl: './start-page.component.html',
-  styleUrls: ['./start-page.component.scss']
+  styleUrls: ['./start-page.component.scss'],
+  standalone: true,
+  imports: [FormsModule, MatFormFieldModule, MatInputModule]
 })
 export class StartPageComponent {
 
