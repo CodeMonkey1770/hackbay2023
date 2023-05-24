@@ -1,6 +1,8 @@
 export class inputDto {
     public age : number = 5;
     public name : string = 'Emma';
+    public daysUntilAppointment : number = 22;
+    public daysUntilExamination : number = 10;
     public symptoms : string = "Schmerzen in der Brust";
     public superpower : string = "fliegen";
     public animal : string = "Giraffe";

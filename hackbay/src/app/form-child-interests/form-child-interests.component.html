@@ -14,28 +14,28 @@
 
             <mat-form-field>
                 <mat-label>My favourite toy...</mat-label>
-                <input matInput>
+                <input matInput value="{{input.toy}}">
             </mat-form-field>
 
             <mat-form-field>
                 <mat-label>I dream of this superpower...</mat-label>
-                <input matInput>
+                <input matInput value="{{input.superpower}}">
             </mat-form-field>
 
             <mat-form-field>
                 <mat-label>My favourite animal...</mat-label>
-                <input matInput>
+                <input matInput value="{{input.animal}}">
             </mat-form-field>
 
             <mat-form-field>
                 <mat-label>My favourite tv show...</mat-label>
-                <input matInput>
+                <input matInput value="{{input.tvShow}}">
             </mat-form-field>
             
         </form>
         <div class="button-wrapper">
-            <button class="btn btn-secondary" routerLink="/" routerLinkActive="active" ariaCurrentWhenActive="page">BACK</button>
-            <button class="btn btn-primary" routerLink="/form2" routerLinkActive="active" ariaCurrentWhenActive="page">NEXT</button>
+            <button class="btn btn-secondary" routerLink="/form1" routerLinkActive="active" ariaCurrentWhenActive="page">BACK</button>
+            <button class="btn btn-primary" routerLink="/results" routerLinkActive="active" ariaCurrentWhenActive="page">NEXT</button>
         </div>
         
     </div>
