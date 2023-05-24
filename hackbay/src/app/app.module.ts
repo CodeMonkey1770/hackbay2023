@@ -17,17 +17,17 @@ import { ResultsPageComponent } from './results-page/results-page.component';
   declarations: [
     AppComponent,
     TextToSpeechComponent,
-    ChatGptComponent,
-    StartPageComponent,
-    FormChildDataComponent,
-    FormChildInterestsComponent,
-    ResultsPageComponent
+    ChatGptComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     BrowserAnimationsModule,
-    MatCardModule
+    MatCardModule,
+    StartPageComponent,
+    FormChildDataComponent,
+    FormChildInterestsComponent,
+    ResultsPageComponent
   ],
   providers: [],
   bootstrap: [AppComponent]

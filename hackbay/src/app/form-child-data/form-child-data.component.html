@@ -1,1 +1,56 @@
-<p>form-child-data works!</p>
+<div class="background-wrapper">
+    <div class="content-wrapper">
+        <div class="header-wrapper">
+            <div class="siemPos">
+                <img class="siemensHealthLogo" src="assets/pictures/Siemens_Healthineers_logo.png">
+            </div>
+            <div class="childData">
+                <p>Your Child's Data</p>
+            </div>
+        </div>
+        
+        
+        <form class="data-form">
+            <div class="left">
+
+                <mat-form-field class="childDataInputField">
+                    <mat-label>Name</mat-label>
+                    <input matInput>
+                </mat-form-field>
+    
+                <mat-form-field>
+                    <mat-label>Age</mat-label>
+                    <input matInput>
+                </mat-form-field>
+    
+                <mat-form-field>
+                    <mat-label>Symptoms</mat-label>
+                    <input matInput>
+                </mat-form-field>
+
+            </div>
+
+
+            <div class="right">
+
+                <mat-form-field>
+                    <mat-label>Days until doctors appointment</mat-label>
+                    <input matInput>
+                </mat-form-field>
+                    
+                <mat-form-field>
+                    <mat-label>Days until examination</mat-label>
+                    <input matInput>
+                </mat-form-field>
+
+            </div>
+
+            
+        </form>
+        <div class="button-wrapper">
+            <button class="btn btn-secondary" routerLink="/" routerLinkActive="active" ariaCurrentWhenActive="page">BACK</button>
+            <button class="btn btn-primary" routerLink="/form2" routerLinkActive="active" ariaCurrentWhenActive="page">NEXT</button>
+        </div>
+        
+    </div>
+</div>
