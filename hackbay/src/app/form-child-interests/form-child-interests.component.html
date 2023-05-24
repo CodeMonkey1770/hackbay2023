@@ -1,7 +1,42 @@
 <div class="background-wrapper">
     <div class="content-wrapper">
-        <p>Child-Interests</p>
-        <button routerLink="/form1" routerLinkActive="active" ariaCurrentWhenActive="page">BACK</button>
-        <button routerLink="/results" routerLinkActive="active" ariaCurrentWhenActive="page">NEXT</button>
+        <div class="header-wrapper">
+            <div class="siemPos">
+                <img class="siemensHealthLogo" src="assets/pictures/Siemens_Healthineers_logo.png">
+            </div>
+            <div class="childData">
+                <p>Your Child's Interests</p>
+            </div>
+        </div>
+        
+        
+        <form class="data-form">
+
+            <mat-form-field>
+                <mat-label>My favourite toy...</mat-label>
+                <input matInput>
+            </mat-form-field>
+
+            <mat-form-field>
+                <mat-label>I dream of this superpower...</mat-label>
+                <input matInput>
+            </mat-form-field>
+
+            <mat-form-field>
+                <mat-label>My favourite animal...</mat-label>
+                <input matInput>
+            </mat-form-field>
+
+            <mat-form-field>
+                <mat-label>My favourite tv show...</mat-label>
+                <input matInput>
+            </mat-form-field>
+            
+        </form>
+        <div class="button-wrapper">
+            <button class="btn btn-secondary" routerLink="/" routerLinkActive="active" ariaCurrentWhenActive="page">BACK</button>
+            <button class="btn btn-primary" routerLink="/form2" routerLinkActive="active" ariaCurrentWhenActive="page">NEXT</button>
+        </div>
+        
     </div>
 </div>

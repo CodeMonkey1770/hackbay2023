@@ -4,31 +4,195 @@
     display:flex;
     align-items: center;
     justify-content: center;
+    
+}
+
+
+.background-image{
+    width: 100vw;
+    height: 100vh;
+    background-color: red;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    z-index: -10;
     background: url('/assets/pictures/KinderWanderung.jpg') no-repeat center center fixed;
-    object-fit: scale-down;
+    background-size: cover;
+}
+
+.background-image::before{
+    content: "";
+    display: block;
+    background-color: rgba(0, 0, 0, 0.493);
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    width: 100vw;
+    height: 100vh;
+}
+
+.header-wrapper{
+    display: flex;
+    align-items: start;
+    justify-content: space-between;
 }
 
 .content-wrapper {
-    background-color: rgba(255, 255, 255, 0.9);
-    padding: 80px 80px;
+    
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    justify-content: end;
     align-items: center;
+    width: 90vw;
+    height: 80vh;
+
+    
+}
+
+.canvas{
+    width: 600px;
+    height: 600px;
+    z-index: 10;
+    position: absolute;
+  }
+  
+.canvas img{
+    width: auto;
+    height: 100%;
+}
+
+.animal-bubble{
+    position: absolute;
+    top: 0;
+    right: -60%;
+}
+
+.bubble {
+    --r: 25px; /* the radius */
+    --t: 30px; /* the size of the tail */
+    
+    width: 400px;
+    padding: calc(2*var(--r)/3);
+    -webkit-mask: 
+      radial-gradient(var(--t) at var(--_d) 0,#0000 98%,#000 102%) 
+        var(--_d) 100%/calc(100% - var(--r)) var(--t) no-repeat,
+      conic-gradient(at var(--r) var(--r),#000 75%,#0000 0) 
+        calc(var(--r)/-2) calc(var(--r)/-2) padding-box, 
+      radial-gradient(50% 50%,#000 98%,#0000 101%) 
+        0 0/var(--r) var(--r) space padding-box;
+    background: rgba(255, 255, 255, 0.9) border-box;
+    color: black;
+
+
+    .content{
+        font-size: 20px;
+        height: 300px;
+        overflow-y: scroll;
+    }
+  }
+  .left {
+    --_d: 0%;
+    border-left: var(--t) solid #0000;
+    margin-right: var(--t);
+    place-self: start;
+  }
+  .right {
+    --_d: 100%;
+    border-right: var(--t) solid #0000;
+    margin-left: var(--t);
+    place-self: end;
+  }
+
+.button-wrapper{
+    display: flex;
+    justify-content: end;
+    gap: 10px;
+}
+
+.btn{
+    padding: 10px 40px;
+    border-radius: 16px;
+    border: 2px solid #1EC6A0;
+    font-size: large;
+    font-weight: 500;
+}
+
+.btn-primary{
+    background-color: #1EC6A0;
+    color: white;
+}
+.btn-secondary{
+    color: #1EC6A0;
+    background-color: #1ec69f57;
+}
+
+.progress{
+    width: 400px;
+    height: 40px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.progress::after{
+    content: " ";
+    display: block;
+    position: absolute;
+    height: 5px;
+    width: 400px;
+    z-index: 1;
+    background-color: coral;
+}
+
+
+
+.circle{
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background-color: #cfcfcf;
+    z-index: 2;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    span{
+        font-weight: 600;
+        color: white;
+        font-size: 20px;
+    }
+}
+
+.active{
+    background-color: #1EC6A0; 
+}
+
+.spacer-1{
+    flex: 2;
+}
+
+.spacer-2{
+    flex: 1;
+}
+
+.footer-wrapper{
     border-radius: 64px;
+    background-color: rgba(255, 255, 255, 0.9);
+    height: 200px;
+    width: 100%;
+    box-sizing: border-box;
+    padding: 20px 40px;
 
     .logo{
-        width: 300px;
-        height: auto;
-    }
 
-    .canvas{
-        width: 300px;
-        height: 300px;
-      }
-      
-    .canvas img{
-        width: 100%;
+        padding: 20px;
+        width: 200px;
         height: auto;
-      }
+
+
+        img{
+            width: 100%;
+            height: auto;
+        }
+    }
 }

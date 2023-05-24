@@ -7,11 +7,11 @@ import {Component, OnInit} from '@angular/core';
   standalone: true
 })
 export class ResultsPageComponent implements OnInit {
-  animationFrames = [
-    ["IMG_0759", 0.3],
-    ["IMG_0760", 0.1],
-    ["IMG_0761", 0.4],
-    ["IMG_0763", 0.1],
+  animationFrames: [string, number][] = [
+    ["IMG_0759", 0.3], //eye = open / mouth = closed
+    ["IMG_0760", 0.1], //eye = closed / mouth = closed
+    ["IMG_0761", 0.2], //eye = closed / mouth = open
+    ["IMG_0763", 1.2], //eye = open / mouth = open
   ];
 
   imageSrc: string = "";
@@ -27,7 +27,7 @@ export class ResultsPageComponent implements OnInit {
 
       index = (index + 1) % this.animationFrames.length;
 
-      setTimeout(playAnimation, 1 * 200);
+      setTimeout(playAnimation,  2000 * delay);
     };
 
     playAnimation();

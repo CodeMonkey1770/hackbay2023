@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Lilita+One&display=swap');
+
 .background-wrapper {
     width: 100vw;
     height: 100vh;
@@ -5,20 +7,94 @@
     align-items: center;
     justify-content: center;
     background: url('/assets/pictures/KinderWanderung.jpg') no-repeat center center fixed;
-    object-fit: scale-down;
+    background-size: cover;
+}
+
+.header-wrapper{
+    display: flex;
+    align-items: start;
+    justify-content: space-between;
+}
+
+
+.data-form{
+
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+
+   
+}
+
+.button-wrapper{
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+}
+
+.btn{
+    padding: 10px 40px;
+    border-radius: 16px;
+    border: 2px solid #1EC6A0;
+    font-size: large;
+    font-weight: 500;
+}
+
+.btn-primary{
+    background-color: #1EC6A0;
+    color: white;
+}
+.btn-secondary{
+    color: #1EC6A0;
+    background-color: #1ec69f57;
 }
 
 .content-wrapper {
+    min-width: 50vw;
     background-color: rgba(255, 255, 255, 0.9);
-    padding: 80px 80px;
+    padding: 40px 80px;
     display: flex;
     flex-direction: column;
-    justify-content: center;
-    align-items: center;
     border-radius: 64px;
+    gap: 20px;
 
     .logo{
         width: 300px;
+        height: auto;
+    }
+
+    .childData {
+        display: flex;
+        justify-content: flex-end; 
+        font-family: 'Lilita One', cursive;
+        color: #EC6602;
+        font-size: 36px;
+        font-weight: bold;
+        font-weight: 900;
+        text-transform: uppercase;
+
+        p{
+            padding: 0;
+            margin: 0;
+        }
+        
+
+    }
+
+    /**
+    .childDataInputField{
+        background-color: rgb(30,198,160);
+        opacity: 45%;
+    }*/
+
+    .siemPos {
+        display: flex;
+        justify-content: flex-start;
+        align-items: flex-start;
+    }
+    
+    .siemensHealthLogo {
+        width: 250px;
         height: auto;
     }
 }
